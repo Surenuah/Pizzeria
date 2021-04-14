@@ -1,0 +1,28 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="1600">
+    <Grid>
+        <Image Stretch="Fill" Source="https://i.mycdn.me/i?r=AyH4iRPQ2q0otWIFepML2LxRov7WWm3ki93n91I5FbB0pQ"></Image>
+        <Border MaxWidth="500" Background="White" MaxHeight="300" CornerRadius="8">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" ShadowDepth="0" Color="Black"></DropShadowEffect>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock FontSize="32" Margin="10 10 0 0" Text="Autorization"></TextBlock>
+                <TextBox x:Name="loginTxtBox" FontSize="30" Margin="10" materialDesign:HintAssist.Hint="Login" Style="{DynamicResource MaterialDesignOutlinedTextFieldTextBox}"/>
+                <TextBox x:Name="passwordTxtBox" FontSize="30" Margin="10" materialDesign:HintAssist.Hint="Password" Style="{DynamicResource MaterialDesignOutlinedTextFieldTextBox}"></TextBox>
+                <StackPanel Orientation="Horizontal">
+                    <Button Margin="10" Style="{DynamicResource MaterialDesignFlatButton}" Click="Register">Register</Button>
+                    <Button Margin="250 0 0 0" Click="Autorize">Autorize</Button>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

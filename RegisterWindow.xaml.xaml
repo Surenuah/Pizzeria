@@ -1,0 +1,33 @@
+﻿<Window x:Class="WpfApp2.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="RegisterWindow" Height="450" Width="800">
+    <Grid>
+        <materialDesign:Snackbar x:Name="SnackBar" Height="50" MessageQueue="{materialDesign:MessageQueue}" Background="Gray" />
+        <Image Stretch="Fill" Source="https://i.mycdn.me/i?r=AyH4iRPQ2q0otWIFepML2LxRov7WWm3ki93n91I5FbB0pQ"></Image>
+        <Border MaxWidth="500" Background="White" MaxHeight="300" CornerRadius="8">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Direction="2" ShadowDepth="0" Color="Black" Opacity="10"></DropShadowEffect>
+            </Border.Effect>
+        </Border>
+        <StackPanel>
+            <materialDesign:Snackbar x:Name="SnackBarRegister" Height="50" MessageQueue="{materialDesign:MessageQueue}" Background="Gray" />
+            <TextBlock FontSize="24" Margin="6 10 0 0" Text="Registration"></TextBlock>
+            <TextBox x:Name="loginTxtBox" Margin="10 10 10 0" materialDesign:HintAssist.Hint="Email"></TextBox>
+            <TextBox x:Name="nameTxtBox" Margin="10 10 10 0" materialDesign:HintAssist.Hint="Name"></TextBox>
+            <TextBox x:Name="familyNameTxtBox" Margin="10 10 10 0" materialDesign:HintAssist.Hint="familyName"></TextBox>
+            <TextBox x:Name="phoneNumberTxtBox" PreviewTextInput="PhoneNumber_PreviewTextInput" Margin="10 10 10 0" materialDesign:HintAssist.Hint="PhoneNumber"></TextBox>
+            <PasswordBox x:Name="passwordTxtBox" Margin="10 10 10 0" materialDesign:HintAssist.Hint="Password"></PasswordBox>
+            <TextBox x:Name="addressTxtBlock" Margin="10 0 0 0" materialDesign:HintAssist.Hint="Address"></TextBox>
+            <StackPanel Orientation="Horizontal">
+                <Button Margin="10" Style="{DynamicResource MaterialDesignFlatButton}">Register</Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
